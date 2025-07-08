@@ -2,7 +2,9 @@
     "modules": [
         "LokiCheckout_LokiCheckout"
     ],
-    "components": [],
+    "components": [
+        "loki-checkout.payment.payment-methods.paypal_express.form"
+    ],
     "config": [],
     "tests": []
 }
