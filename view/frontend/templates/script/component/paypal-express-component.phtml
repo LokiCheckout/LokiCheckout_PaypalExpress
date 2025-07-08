@@ -1,0 +1,98 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ViewModelFactory $viewModelFactory */
+
+$tokenUrl = $block->getUrl('paypal/express/getTokenData');
+$authorizeUrl = $block->getUrl('paypal/express/onAuthorization');
+$cancelUrl = $block->getUrl('paypal/express/cancel');
+
+$buttonStyle = $block->getButtonStyle();
+?>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('LokiCheckoutPaypalExpress', () => ({
+                ...LokiCheckoutComponentType,
+                quoteId: 0,
+                customerId: 0,
+                formKey: '',
+                initButtons() {
+                    const buttonStyle = JSON.parse('<?= json_encode($buttonStyle) ?>');
+                    window.paypal.Buttons({
+                        style: buttonStyle,
+                        createOrder: async () => {
+                            const response = await fetch("<?= $tokenUrl ?>", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                },
+                                body: new URLSearchParams({
+                                    quote_id: this.quoteId,
+                                    customer_id: this.customerId || '',
+                                    form_key: this.formKey,
+                                    button: true // @todo: Always true?
+                                }),
+                            });
+
+                            const responseData = await response.json();
+                            if (responseData.error_message) {
+                                const globalMessageComponent = Alpine.store('components').get('LokiComponentsGlobalMessages');
+                                globalMessageComponent.messages.push({
+                                    type: 'error',
+                                    text: responseData.error_message
+                                });
+
+                                return false;
+                            }
+
+                            return responseData.token;
+                        },
+                        onApprove: async (data) => {
+                            const response = await fetch("<?= $authorizeUrl ?>", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/x-www-form-urlencoded",
+                                },
+                                body: new URLSearchParams({
+                                    paymentToken: data.orderID,
+                                    payerId: data.payerID,
+                                    paypalFundingSource: data.fundingSource, // @todo: paypal
+                                    form_key: this.formKey,
+                                }),
+                            });
+
+                            const responseData = await response.json();
+                            if (responseData.error_message) {
+                                const globalMessageComponent = Alpine.store('components').get('LokiComponentsGlobalMessages');
+                                globalMessageComponent.messages.push({
+                                    type: 'error',
+                                    text: responseData.error_message
+                                });
+
+                                return false;
+                            }
+
+                            if (responseData.redirectUrl) {
+                                window.location.assign(responseData.redirectUrl);
+                            }
+
+                            return true;
+                        },
+                        async onCancel() {
+                            window.location.assign("<?= $cancelUrl ?>");
+                        },
+                        onInit: () => {
+                            this.valid = false;
+                        }
+                    }).render(this.$refs.buttons);
+                }
+            })
+        );
+    });
+</script>

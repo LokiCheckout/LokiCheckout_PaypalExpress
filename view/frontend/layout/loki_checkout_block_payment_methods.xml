@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <block
+            name="loki-checkout.payment.payment-methods.paypal_express.form"
+            template="LokiCheckout_PaypalExpress::checkout/payment/method/paypal_express.phtml"/>
+
+        <referenceContainer name="loki-components">
+            <block name="loki-checkout-paypal-express.script.components.paypal_express" template="LokiCheckout_PaypalExpress::script/component/paypal-express-component.phtml">
+                <arguments>
+                    <argument name="button_style" xsi:type="array">
+                        <!-- See https://developer.paypal.com/sdk/js/reference/#style -->
+                        <item name="layout" xsi:type="string">horizontal</item>
+                        <item name="color" xsi:type="string">gold</item>
+                        <item name="shape" xsi:type="string">rect</item>
+                        <item name="label" xsi:type="string">paypal</item>
+                        <item name="tagline" xsi:type="boolean">false</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="before.body.end">
+            <block name="loki-checkout-paypal-express.script.paypal_sdk" template="LokiCheckout_PaypalExpress::script/paypal-sdk.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

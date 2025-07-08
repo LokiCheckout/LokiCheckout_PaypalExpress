@@ -1,0 +1,29 @@
+<?php
+declare(strict_types=1);
+
+use LokiCheckout\PaypalExpress\Component\PaypalExpress\PaypalExpressViewModel;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+use Yireo\LokiComponents\Util\Block\CssClass;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var CssClass $css */
+/** @var PaypalExpressViewModel $viewModel */
+/** @var ViewModelFactory $viewModelFactory */
+?>
+<div class="<?= $css('') ?>">
+    <div x-ref="buttons"></div>
+
+    <div
+        data-pp-message
+        data-pp-style-layout="text"
+        data-pp-style-logo-type="inline"
+        data-pp-style-text-color="black"
+        data-pp-style-text-size="12"
+        data-pp-amount="<?= $viewModel->getAmount() ?>"
+        data-pp-placement="payment">
+    </div>
+</div>
+

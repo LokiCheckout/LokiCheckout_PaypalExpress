@@ -1,0 +1,16 @@
+<?php
+declare(strict_types=1);
+
+use LokiCheckout\PaypalExpress\ViewModel\PaypalSdk;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Yireo\LokiComponents\Factory\ViewModelFactory;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+/** @var ViewModelFactory $viewModelFactory */
+/** @var PaypalSdk $paypalSdk */
+
+$paypalSdk = $viewModelFactory->create(PaypalSdk::class);
+?>
+<script src="<?= $paypalSdk->getSdkUrl() ?>"></script>
