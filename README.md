@@ -13,3 +13,7 @@ Next, enable this module:
 bin/magento module:enable LokiCheckout_PaypalExpress
 ```
 
+## Usage
+Under Luma, this module brings the same functionality as in the regular Luma Checkout.
+
+The PayPal Review page is currently not styled under Hyva. Enable the module `Hyva_ThemeFallback` and configure the URL `paypal/express/review/` to be served via a Luma theme.
