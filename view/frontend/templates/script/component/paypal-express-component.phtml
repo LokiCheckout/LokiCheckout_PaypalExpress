@@ -42,11 +42,7 @@ $buttonStyle = $block->getButtonStyle();
 
                             const responseData = await response.json();
                             if (responseData.error_message) {
-                                const globalMessageComponent = Alpine.store('components').get('LokiComponentsGlobalMessages');
-                                globalMessageComponent.messages.push({
-                                    type: 'error',
-                                    text: responseData.error_message
-                                });
+                                this.addGlobalError(responseData.error_message);
 
                                 return false;
                             }
@@ -69,11 +65,7 @@ $buttonStyle = $block->getButtonStyle();
 
                             const responseData = await response.json();
                             if (responseData.error_message) {
-                                const globalMessageComponent = Alpine.store('components').get('LokiComponentsGlobalMessages');
-                                globalMessageComponent.messages.push({
-                                    type: 'error',
-                                    text: responseData.error_message
-                                });
+                                this.addGlobalError(responseData.error_message);
 
                                 return false;
                             }
