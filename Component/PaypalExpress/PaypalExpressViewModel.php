@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LokiCheckout\PaypalExpress\Component\PaypalExpress;
+namespace Loki\Checkout\PaypalExpress\Component\PaypalExpress;
 
 use Magento\Framework\Data\Form\FormKey;
 use Yireo\LokiCheckout\ViewModel\CheckoutState;
