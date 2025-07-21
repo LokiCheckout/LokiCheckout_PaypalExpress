@@ -3,8 +3,8 @@
 namespace LokiCheckout\PaypalExpress\Payment\Icon;
 
 use Magento\Framework\Module\Manager as ModuleManager;
-use Yireo\LokiCheckout\Payment\Icon\IconResolverContext;
-use Yireo\LokiCheckout\Payment\Icon\IconResolverInterface;
+use LokiCheckout\Core\Payment\Icon\IconResolverContext;
+use LokiCheckout\Core\Payment\Icon\IconResolverInterface;
 
 class IconResolver implements IconResolverInterface
 {

@@ -2,8 +2,8 @@
     "modules": [
         "Magento_Paypal",
         "Magento_Store",
-        "Yireo_LokiCheckout",
-        "Yireo_LokiComponents"
+        "LokiCheckout_Core",
+        "Loki_Components"
     ],
     "components": [
         "loki-checkout.payment.payment-methods.paypal_express.form"
