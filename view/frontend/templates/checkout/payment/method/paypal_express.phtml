@@ -15,7 +15,8 @@ use Loki\Components\Util\Block\CssClass;
 /** @var PaypalExpressViewModel $viewModel */
 /** @var ViewModelFactory $viewModelFactory */
 ?>
-<div class="<?= $css('') ?>">
+<div class="<?= /* @noEscape */
+$css('') ?>">
     <div x-ref="buttons"></div>
 
     <div
@@ -24,7 +25,7 @@ use Loki\Components\Util\Block\CssClass;
         data-pp-style-logo-type="inline"
         data-pp-style-text-color="black"
         data-pp-style-text-size="12"
-        data-pp-amount="<?= $viewModel->getAmount() ?>"
+        data-pp-amount="<?= $escaper->escapeHtml($viewModel->getAmount()) ?>"
         data-pp-placement="payment">
     </div>
 </div>

@@ -15,4 +15,5 @@ use Loki\Components\Factory\ViewModelFactory;
 
 $paypalSdk = $viewModelFactory->create(PaypalSdk::class);
 ?>
-<script src="<?= $paypalSdk->getSdkUrl() ?>"></script>
+<script src="<?= /* @noEscape */
+$paypalSdk->getSdkUrl() ?>"></script>
