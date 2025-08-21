@@ -1,6 +1,6 @@
 {
     "name": "loki-checkout/magento2-paypal-express",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "N/A",
     "keywords": ["loki-payment"],
     "type": "magento2-module",
