@@ -6,7 +6,7 @@
         "Loki_Components"
     ],
     "components": [
-        "loki-checkout.payment.payment-methods.paypal_express.form"
+        "loki-checkout.payment.methods.paypal_express.form"
     ],
     "config": [],
     "tests": []

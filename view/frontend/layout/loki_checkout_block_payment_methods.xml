@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
         <block
-            name="loki-checkout.payment.payment-methods.paypal_express.form"
+            name="loki-checkout.payment.methods.paypal_express.form"
             template="LokiCheckout_PaypalExpress::checkout/payment/method/paypal_express.phtml"/>
 
         <referenceContainer name="loki-components">
