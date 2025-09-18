@@ -5,7 +5,7 @@
             name="loki-checkout.payment.methods.paypal_express.form"
             template="LokiCheckout_PaypalExpress::checkout/payment/method/paypal_express.phtml"/>
 
-        <referenceContainer name="loki-components">
+        <referenceContainer name="loki.components">
             <block name="loki-checkout-paypal-express.script.components.paypal_express" template="LokiCheckout_PaypalExpress::script/component/paypal-express-component.phtml">
                 <arguments>
                     <argument name="button_style" xsi:type="array">
