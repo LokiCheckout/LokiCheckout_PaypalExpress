@@ -35,5 +35,6 @@
         "loki-checkout.payment.methods.paypal_express.form"
     ],
     "config": [],
-    "tests": []
+    "tests": [],
+    "phpcs_severity": "8"
 }
