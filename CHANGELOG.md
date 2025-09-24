@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 24 September 2025
+### Fixed
+- Change containers into blocks to allow for caching
+- Rename loki-components container to loki.components
+
 ## [1.0.3] - 02 September 2025
 ### Fixed
 - Change loki-checkout.payment.payment-methods to loki-checkout.payment.methods
