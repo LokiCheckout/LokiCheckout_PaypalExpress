@@ -1,9 +1,9 @@
 # LokiCheckout_PaypalExpress
 
-**This is an add-on package to the LokiCheckout. It adds compatibility for the `Magento_Paypal` module its PayPal Express payment method.**
+**This Magento 2 module is an add-on package to the LokiCheckout. It adds compatibility for the `Magento_Paypal` module its PayPal Express payment method.**
 
 ## Installation
-Install this package via composer (assuming you have setup the `composer.yireo.com` repository correctly already):
+Install this package via composer:
 ```bash
 composer require loki-checkout/magento2-paypal-express
 ```
