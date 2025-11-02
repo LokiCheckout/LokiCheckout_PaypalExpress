@@ -1,15 +1,17 @@
 {
-    "name": "loki-checkout/magento2-paypal-express",
+    "name": "loki-checkout\/magento2-paypal-express",
     "version": "1.0.4",
-    "description": "N/A",
-    "keywords": ["loki-payment"],
+    "description": "N\/A",
+    "keywords": [
+        "loki-payment"
+    ],
     "type": "magento2-module",
     "require": {
-        "magento/framework": "^103.0",
-        "magento/module-paypal": "^101.0",
-        "magento/module-store": "^101.1",
-        "loki-checkout/magento2-core": "^2.0",
-        "loki/magento2-components": "^2.0"
+        "magento\/framework": "^103.0",
+        "magento\/module-paypal": "^101.0",
+        "magento\/module-store": "^101.1",
+        "loki-checkout\/magento2-core": "^2.0",
+        "loki\/magento2-components": "^2.0"
     },
     "license": "OSL-3.0",
     "autoload": {
