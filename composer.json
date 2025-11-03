@@ -3,9 +3,8 @@
     "version": "1.0.4",
     "description": "N/A",
     "keywords": [
-        "loki-checkout-payment",
         "loki-checkout",
-        "loki-checkout-core"
+        "loki-checkout-category-payment"
     ],
     "type": "magento2-module",
     "require": {
