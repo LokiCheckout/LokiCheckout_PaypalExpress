@@ -1,10 +1,10 @@
 {
     "integration": true,
     "sequence": [
-        "LokiCheckout_Core",
-        "Loki_Components",
         "Magento_Paypal",
-        "Magento_Store"
+        "Magento_Store",
+        "LokiCheckout_Core",
+        "Loki_Components"
     ],
     "modules": [
         "LokiCheckout_Core",
@@ -38,5 +38,7 @@
     "config": [],
     "tests": [],
     "phpcs_severity": "8",
-    "phpstan_level": "5"
+    "phpstan_level": "5",
+    "module_name": "LokiCheckout_PaypalExpress",
+    "composer_name": "loki-checkout/magento2-paypal-express"
 }
