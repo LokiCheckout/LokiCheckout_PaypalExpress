@@ -1,7 +1,7 @@
 {
     "name": "loki-checkout/magento2-paypal-express",
     "version": "1.0.4",
-    "description": "N/A",
+    "description": "Compatibility module for the core PayPal Express payment solution",
     "keywords": [
         "loki-checkout",
         "loki-checkout-category-payment"
