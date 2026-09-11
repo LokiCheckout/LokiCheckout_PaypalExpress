@@ -23,5 +23,32 @@
         "psr-4": {
             "LokiCheckout\\PaypalExpress\\": ""
         }
+    },
+    "extra": {
+        "loki": {
+            "countries": [
+                "AT",
+                "AU",
+                "BE",
+                "BR",
+                "CA",
+                "CH",
+                "CZ",
+                "DE",
+                "DK",
+                "FI",
+                "FR",
+                "IE",
+                "IN",
+                "IT",
+                "NL",
+                "NO",
+                "PL",
+                "SE",
+                "SP",
+                "UK",
+                "US"
+            ]
+        }
     }
 }
