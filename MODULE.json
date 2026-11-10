@@ -3,6 +3,7 @@
     "sequence": [
         "LokiCheckout_Core",
         "Loki_Components",
+        "Loki_CssUtils",
         "Magento_Paypal",
         "Magento_Store"
     ],
