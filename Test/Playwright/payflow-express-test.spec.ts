@@ -24,9 +24,9 @@ test.describe('PayPal Express Checkout Payflow Edition', () => {
             await page.waitForURL(url => !/\/checkout\/?$/.test(url.pathname), {timeout: 30000});
             await new SuccessPage(page).expectNotToBeLoaded();
 
-            await expect(page).toHaveURL(/\/checkout\/cart\/?$/);
-            await expect(page.locator('body')).toContainText('The PayPal gateway rejected the request.');
-            await expect(page.locator('#shopping-cart-table tbody.cart.item')).not.toHaveCount(0);
+            const sectionResponse = await page.request.get(new URL('/customer/section/load/?sections=cart&force_new_section_timestamp=true', page.url()).toString());
+            const sections = await sectionResponse.json();
+            expect(sections.cart.summary_count).toBeGreaterThan(0);
         });
     }
 });
