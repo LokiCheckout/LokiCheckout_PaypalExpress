@@ -5,6 +5,7 @@
         "Loki_Components",
         "Loki_CssUtils",
         "Magento_Paypal",
+        "Magento_Quote",
         "Magento_Store"
     ],
     "modules": [
