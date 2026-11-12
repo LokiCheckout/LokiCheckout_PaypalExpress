@@ -30,6 +30,8 @@ Under Luma, this module brings the same functionality as in the regular Luma Che
 
 The PayPal Review page is currently not styled under Hyva. Enable the module `Hyva_ThemeFallback` and configure the URL `paypal/express/review/` to be served via a Luma theme.
 
+The PayPal Express Checkout Payflow Edition (`payflow_express`) and its PayPal Credit variant (`payflow_express_bml`) are supported as well: when the order is submitted, the shopper is redirected to PayPal and the order is placed by the core PayPal controllers after returning. See [PSP.md](PSP.md) for details.
+
 ## Current status
 
 <!-- badges.test.start -->
