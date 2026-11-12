@@ -38,8 +38,8 @@ class PayflowExpressRedirectTask implements TaskInterface
         throw (new RedirectException())->setUrl($redirectUrl);
     }
 
+    // phpcs:ignore Magento2.CodeAnalysis.EmptyBlock
     public function afterPlaceOrder(int $orderId): void
     {
-        return;
     }
 }
