@@ -40,5 +40,6 @@ class PayflowExpressRedirectTask implements TaskInterface
 
     public function afterPlaceOrder(int $orderId): void
     {
+        return;
     }
 }
