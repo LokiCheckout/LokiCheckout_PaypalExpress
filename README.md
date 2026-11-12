@@ -32,6 +32,10 @@ The PayPal Review page is currently not styled under Hyva. Enable the module `Hy
 
 The PayPal Express Checkout Payflow Edition (`payflow_express`) and its PayPal Credit variant (`payflow_express_bml`) are supported as well: when the order is submitted, the shopper is redirected to PayPal and the order is placed by the core PayPal controllers after returning. See [PSP.md](PSP.md) for details.
 
+Limitations of the Payflow Edition:
+- When the shopper cancels at PayPal or PayPal rejects the request, the core PayPal controllers return the shopper to the shopping cart (not to the Loki Checkout).
+- The order is placed outside of the Loki Checkout, so `afterPlaceOrder()` tasks of other modules (like the newsletter subscription) are not run for these orders.
+
 ## Current status
 
 <!-- badges.test.start -->
