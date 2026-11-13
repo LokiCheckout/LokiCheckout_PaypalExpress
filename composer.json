@@ -18,6 +18,8 @@
         "php": ">=8.2 <8.6"
     },
     "require-dev": {
+        "loki-checkout/magento2-functional-tests": "@dev",
+        "loki/magento2-functional-tests": "@dev",
         "magento/module-payment": "^100.4",
         "phpunit/phpunit": "^10.5",
         "yireo/magento2-integration-test-helper": "~0.0"
