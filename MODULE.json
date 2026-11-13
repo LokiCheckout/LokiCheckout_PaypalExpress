@@ -51,7 +51,11 @@
         "loki-checkout.payment.methods.paypal_express.form"
     ],
     "config": [],
-    "tests": [],
+    "tests": {
+        "unit": 7,
+        "integration": 3,
+        "functional": 0
+    },
     "phpcs_severity": "6",
     "phpstan_level": "5",
     "module_name": "LokiCheckout_PaypalExpress",
