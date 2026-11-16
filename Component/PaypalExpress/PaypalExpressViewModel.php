@@ -24,6 +24,9 @@ class PaypalExpressViewModel extends ComponentViewModel
         return 'LokiCheckoutPaypalExpress';
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getJsData(): array
     {
         return [

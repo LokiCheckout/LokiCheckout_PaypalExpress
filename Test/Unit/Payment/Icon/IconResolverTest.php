@@ -45,6 +45,9 @@ class IconResolverTest extends TestCase
         $this->assertFalse($this->createResolver(false)->resolve($context));
     }
 
+    /**
+     * @return array<int, array<int, string>>
+     */
     public static function getSupportedCodes(): array
     {
         return [

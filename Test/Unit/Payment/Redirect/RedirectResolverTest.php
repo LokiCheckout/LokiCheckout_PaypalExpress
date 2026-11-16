@@ -41,6 +41,9 @@ class RedirectResolverTest extends TestCase
         $this->assertFalse($resolver->resolve($this->createContext($methodCode)));
     }
 
+    /**
+     * @return array<int, array<int, string|null>>
+     */
     public static function getOtherMethodCodes(): array
     {
         return [

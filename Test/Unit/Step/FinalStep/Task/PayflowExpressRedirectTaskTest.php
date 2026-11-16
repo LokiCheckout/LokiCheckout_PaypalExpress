@@ -49,6 +49,9 @@ class PayflowExpressRedirectTaskTest extends TestCase
         $task->afterPlaceOrder(42);
     }
 
+    /**
+     * @return array<int, array<int, string>>
+     */
     public static function getPayflowExpressMethods(): array
     {
         return [
@@ -57,6 +60,9 @@ class PayflowExpressRedirectTaskTest extends TestCase
         ];
     }
 
+    /**
+     * @return array<int, array<int, string>>
+     */
     public static function getOtherMethods(): array
     {
         return [
