@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 16 November 2026
+### Fixed
+- Document Payflow Express limitations and unused redirect resolver
+- Add `Magento_Quote` dependency and test dependencies
+- Avoid empty afterPlaceOrder() in PayflowExpressRedirectTask
+- Register Payflow Express redirect task globally to keep the core FinalStep tasks
+- Only resolve PayPal review redirect for `paypal_express`
+
+### Added
+- Support `payflow_express` and `payflow_express_bml` via redirect before placing the order
+
 ## [1.0.5] - 09 November 2026
 ### Fixed
 - Remove PHP 8.1 support, add PHP 8.5 support
