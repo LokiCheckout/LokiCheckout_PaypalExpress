@@ -8,6 +8,14 @@
         </arguments>
     </type>
 
+    <type name="LokiCheckout\Core\Step\FinalStep\TaskListing">
+        <arguments>
+            <argument name="tasks" xsi:type="array">
+                <item name="paypalPayflowExpressRedirect" xsi:type="object" sortOrder="10000">LokiCheckout\PaypalExpress\Step\FinalStep\Task\PayflowExpressRedirectTask</item>
+            </argument>
+        </arguments>
+    </type>
+
     <!--
     <type name="LokiCheckout\Core\Payment\Redirect\RedirectResolverListing">
         <arguments>
